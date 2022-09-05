@@ -107,5 +107,17 @@ Secara default, label warna hitam menandakan paket TCP yang yang bermasalah sepe
 <img src="../assets/prak2-ss-5.png">
 <br>
 <br>
-Note: Disini kita melakukan ping ke default gateway sebanyak 5 kali, dan terekam di wireshark. disini terdapat proses ping request yang dilakukan oleh komputer saya (10.252.128.2) lalu dibalas oleh default gateway (ping reply).
+Note: Disini kita melakukan ping ke default gateway sebanyak 5 kali, dan terekam di wireshark. disini terdapat proses ping request yang dilakukan oleh komputer saya (10.252.135.172) lalu dibalas oleh default gateway 10.252.128.2 (ping reply).
+
+### - MELIHAT ISI HEADER DARI ICMP 
+<img src="../assets/prak2-ss-6.png">
+- VERSION 4: Artinya lalu lintas menggunakan IPv4
+- Headear Lenght : Artinya panjang header IP 20 bytes
+- Protocol ICMP : Artinya protokol jaringan yang digunakan adalah ICMP
+- Src: 10.252.135.172 , Dst: 10.252.128.2 : Artinya saya melakukan request ping dari 10.252.135.172 (local komputer saya) ke default gateway (10.252.128.2)
+
+## KESIMPULAN 
+Internet Control Message Protocol (ICMP) adalah salah satu protokol inti dari keluarga protokol internet. ICMP utamanya digunakan oleh sistem operasi komputer jaringan untuk mengirim pesan kesalahan yang menyatakan, sebagai contoh, bahwa komputer tujuan tidak bisa dijangkau.
+
+ICMP berbeda tujuan dengan TCP dan UDP dalam hal ICMP tidak digunakan secara langsung oleh aplikasi jaringan milik pengguna. salah satu pengecualian adalah aplikasi ping yang mengirim pesan ICMP Echo Request (dan menerima Echo Reply) untuk menentukan apakah komputer tujuan dapat dijangkau dan berapa lama paket yang dikirimkan dibalas oleh komputer tujuan.
 
