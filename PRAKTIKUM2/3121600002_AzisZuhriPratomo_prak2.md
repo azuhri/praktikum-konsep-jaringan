@@ -95,26 +95,42 @@ Secara default, label warna hitam menandakan paket TCP yang yang bermasalah sepe
 ## MENCOBA METRACKING JALUR ICMP (PACKET ANALYZER)
 
 ### - MENGECHECK IP ADDRESS LAPTOP 
-<img src="../assets/prak2-ss-2.png">
+<img src="../assets/prak2-ss-2.png">  
+</br>
+</br>
+Pada tahap ini, saya melakukan pengecekan terhadap ip dari laptop saya sendiri dan untuk mengetahui network dari jaringan yang terhubung ke laptop saya
 
 ### - MENGECHECK DEFAULT GATEWAY 
 <img src="../assets/prak2-ss-3.png">
+</br>
+</br>
+Pada tahap ini, saya mencari tahu ip yang menjadi default gateway pada jaringan saya , sebelum saya melakukan ping
 
 ### - MELAKUKAN PING KE DEFAULT GATEWAY
 <img src="../assets/prak2-ss-4.png">
+<br>
+<br>
+Pada tahap ini, saya telah melakukan ping sebanyak 5 kali dari komputer (10.252.135.172) ke ip yang menjadi default gateway di jaringan saya (10.252.128.2). Proses ping berhasil dengan mendapat balasan dari ip default gateway
 
-### - MELIHAT LALU LINTAS JARINGAN PADA WIRESHART DAN MELAKUKAN FILTER UNTUK PROTOKOL ICMP SAJA
+### - MELIHAT LALU LINTAS JARINGAN PADA WIRESHART DAN MELAKUKAN FILTER UNTUK PROTOKOL ICMP SAJA PADA WIRESHARK
 <img src="../assets/prak2-ss-5.png">
 <br>
 <br>
-Note: Disini kita melakukan ping ke default gateway sebanyak 5 kali, dan terekam di wireshark. disini terdapat proses ping request yang dilakukan oleh komputer saya (10.252.135.172) lalu dibalas oleh default gateway 10.252.128.2 (ping reply).
+Note: Disini kita telah melakukan ping ke default gateway sebanyak 5 kali, dan terekam di wireshark. Lalu terlihat bahwa proses ping request yang dilakukan oleh komputer saya (10.252.135.172) lalu dibalas oleh default gateway 10.252.128.2 (ping reply) sebanyak 5 kali juga.
 
 ### - MELIHAT ISI HEADER DARI ICMP 
 <img src="../assets/prak2-ss-6.png">
+
 - VERSION 4: Artinya lalu lintas menggunakan IPv4
 - Headear Lenght : Artinya panjang header IP 20 bytes
 - Protocol ICMP : Artinya protokol jaringan yang digunakan adalah ICMP
 - Src: 10.252.135.172 , Dst: 10.252.128.2 : Artinya saya melakukan request ping dari 10.252.135.172 (local komputer saya) ke default gateway (10.252.128.2)
+
+### - PEMETAAN HEADER DARI ICMP
+<img src="../assets/prak2-ss-7.png">
+</br>
+</br>
+Terlihat pada tabel pemetaan header ICMP, ketika terjadinya echo ping request tersebut, icmp bertype 8 dan codenya 0, dengan algoritma checksum 0xb036.
 
 ## KESIMPULAN 
 Internet Control Message Protocol (ICMP) adalah salah satu protokol inti dari keluarga protokol internet. ICMP utamanya digunakan oleh sistem operasi komputer jaringan untuk mengirim pesan kesalahan yang menyatakan, sebagai contoh, bahwa komputer tujuan tidak bisa dijangkau.
