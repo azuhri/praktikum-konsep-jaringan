@@ -83,3 +83,4 @@ Terlihat juga pada saat PC-2 melakukan ping sudah tidak terjadi request timeout 
 
 
 
+
