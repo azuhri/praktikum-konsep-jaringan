@@ -1,5 +1,5 @@
-# PRAKTIKUM VLAN DAN ROUTER ON STICK
-Pada praktikum kali kita akan melakukan praktikum vlan dan router on stick yang menghubungkan antara 3 network pada vlan yang berbeda
+# PRAKTIKUM ROUTING STATIC DENGAN METRIC
+Pada praktikum kali kita akan melakukan praktikum routing static dengan metric
 
 Dan topologynya sebagai berikut :
 <br>
